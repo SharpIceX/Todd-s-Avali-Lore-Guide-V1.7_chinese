@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{soul}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{lmodern}
+\usepackage{sectsty}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{indentfirst}
+\usepackage[
+    a4paper,
+    inner=2.5cm,
+    outer=2cm,
+    top=2cm,
+    bottom=2cm,
+    includeheadfoot,
+    headheight=16pt
+]{geometry}
+
+\setlength{\parindent}{2em} % 首行缩进两个字符
+\sectionfont{\color{darkbrown}} % 章节标题颜色
+
+% 颜色定义
+\definecolor{orangebold}{HTML}{C55A11}
+\definecolor{lightorange}{HTML}{ED7D31}
+\definecolor{darkbrown}{HTML}{833C0B}
+
+\input{./components/fonts.tex} % 字体设置
+\input{./components/headerfooter.tex} % 页眉页脚设置
+
+\begin{document}
+
+\pagecolor[HTML]{A9A9A9}
+\color{black}
+
+\pagenumbering{roman}
+\input{./pages/half-title/main.tex} % 半标题页
+\input{./pages/blank/main.tex} % 空白页
+\input{./pages/title.tex} % 正标题页
+\input{./pages/foreword.tex} % 前言页
+% TODO：鸣谢
+% TODO：变更备注
+% TODO：目录页
+
+\pagenumbering{arabic}
+% TODO：封面，不显示页码
+% TODO：...以下是章节内容
+
+\end{document}

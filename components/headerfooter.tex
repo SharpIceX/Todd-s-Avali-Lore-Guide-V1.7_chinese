@@ -1,0 +1,21 @@
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{\hspace*{-1cm}1.7 支持者版}
+\fancyhead[R]{\hspace*{2cm}20241221}
+
+% 不在第一页显示页眉
+\thispagestyle{empty}
+
+% 页码
+\fancyfoot[C]{%
+	\vspace{-10pt}
+	\begin{center}
+		\textcolor{orangebold}{\rule{1.3cm}{0.5mm}}\\[1mm]
+		\raisebox{-0.5mm}{\thepage}\\[1mm]
+		\textcolor{orangebold}{\rule{1.3cm}{1mm}}
+	\end{center}
+}
+
+% 移除页眉的横线
+\renewcommand{\headrulewidth}{0pt}

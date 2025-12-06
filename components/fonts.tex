@@ -1,0 +1,21 @@
+\xeCJKsetup{
+	CJKglue = \hspace{0pt}, % 防止中英文粘连
+	CheckSingle = true      % 单个汉字也启用 CJK 字体
+}
+
+% Serif
+\setCJKmainfont{SourceHanSerifSC}[
+	Path = ./fonts/SourceHanSerifSC/,
+	Extension = .otf,
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Regular, % fallback 到 Regular
+	AutoFakeSlant = 0.25    % 斜体时轻微 fake
+]
+
+% Avali Scratch
+\newfontfamily\avaliscratch{Avali Scratch}[
+	Path = ./fonts/Avali_Scratch/,
+	Extension = .otf,
+	UprightFont = avali-scratch,
+]
