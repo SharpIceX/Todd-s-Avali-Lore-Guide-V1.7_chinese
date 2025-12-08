@@ -2,15 +2,15 @@
 	"latex-workshop.latex.outDir": "./out",
 	"latex-workshop.latex.tools": [
 		{
-			"name": "xelatex",
-			"command": "xelatex",
+			"name": "lualatex",
+			"command": "lualatex",
 			"args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-output-directory=./out", "%DOC%"]
 		}
 	],
 	"latex-workshop.latex.recipes": [
 		{
-			"name": "xelatex",
-			"tools": ["xelatex"]
+			"name": "lualatex",
+			"tools": ["lualatex"]
 		}
 	]
 }

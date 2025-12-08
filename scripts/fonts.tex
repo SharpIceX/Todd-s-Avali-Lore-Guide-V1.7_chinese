@@ -1,0 +1,57 @@
+\setlength{\parindent}{2em} % 首行缩进两个字符
+
+% 行距
+\renewcommand{\normalsize}{\fontsize{11pt}{15pt}\selectfont}
+
+% 西文 Serif
+\setmainfont{lmroman10-regular}[
+	Path = ./fonts/LatinModern/,
+	Extension = .otf,
+	BoldFont = lmroman10-bold,
+	% ItalicFont = lmroman10-italic,
+	% BoldItalicFont = lmroman10-bolditalic,
+]
+
+% 中文 Serif
+\setCJKmainfont{SourceHanSerifSC-Regular}[
+	Path = ./fonts/SourceHanSerifSC/,
+	Extension = .otf,
+	BoldFont = SourceHanSerifSC-Bold,
+	% ItalicFont = SourceHanSerifSC-Light,
+	UprightFont = SourceHanSerifSC-Regular,
+	% MediumFont = SourceHanSerifSC-Medium,
+	% HeavyFont = SourceHanSerifSC-Heavy,
+	% ExtraLightFont = SourceHanSerifSC-ExtraLight,
+	% SemiBoldFont = SourceHanSerifSC-SemiBold
+]
+
+% 中文 Sans
+\setCJKsansfont{SourceHanSansSC-Regular}[
+	Path = ./fonts/SourceHanSansSC/,
+	Extension = .otf,
+	BoldFont = SourceHanSansSC-Bold,
+	% LightFont = SourceHanSansSC-Light,
+	UprightFont = SourceHanSansSC-Regular,
+	% MediumFont = SourceHanSansSC-Medium,
+	% HeavyFont = SourceHanSansSC-Heavy,
+	% ExtraLightFont = SourceHanSansSC-ExtraLight,
+	% NormalFont = SourceHanSansSC-Normal
+]
+
+% 数学字体
+\setmathfont{LMRomanMath}[
+	Path = ./fonts/LMRomanMath/,
+	Extension = .otf
+]
+
+% Nerd 符号图标字体
+\newfontfamily\nerd{SymbolsNerdFont-Regular}[
+	Path = ./fonts/Nerd/,
+	Extension = .ttf
+]
+
+% Avali Scratch 字体
+\newfontfamily\avaliscratch{avali-scratch}[
+	Path = ./fonts/Avali_Scratch/,
+	Extension = .otf
+]

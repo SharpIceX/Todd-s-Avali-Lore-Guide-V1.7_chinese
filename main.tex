@@ -1,9 +1,11 @@
+% !TEX program = lualatex
+
 \documentclass{article}
 
 % 字体设置
 \usepackage{fontspec}
 \usepackage{unicode-math}
-\usepackage{xeCJK}
+\usepackage[fontset=none]{ctex}
 
 \usepackage[
     paperwidth=210mm,
@@ -26,20 +28,22 @@
 % 内容
 \usepackage{fancyhdr}
 \usepackage{eso-pic}
-\usepackage{sectsty}
+\usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{indentfirst}
-\usepackage{soul}
-\usepackage{fontawesome5}
+\usepackage{ulem}
 \usepackage[most]{tcolorbox}
 
-\sectionfont{\color{darkbrown}} % 章节标题颜色
-
 % 颜色定义
-\input{./components/colors.tex} % 颜色设置
-\input{./components/fonts.tex} % 字体设置
-\input{./components/headerfooter.tex} % 页眉页脚设置
-\input{./components/utils.tex} % 实用工具
+\input{./scripts/colors.tex} % 颜色设置
+\input{./scripts/fonts.tex} % 字体设置
+\input{./scripts/headerfooter.tex} % 页眉页脚设置
+\input{./scripts/utils.tex} % 实用工具
+
+% 章节标题颜色
+\titleformat{\section}
+	{\color{darkbrown}\Large\bfseries}
+	{\thesection}{1em}{}
 
 \begin{document}
 

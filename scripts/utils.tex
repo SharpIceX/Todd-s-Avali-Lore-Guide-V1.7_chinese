@@ -9,11 +9,14 @@
 	before skip = 3ex,
 	colbacktitle=sharpice_blue,
 	coltitle=white,
-	fonttitle=\bfseries\sffamily,
 	toptitle= 2mm,
-	title={\faInfoCircle\hspace*{0.5mm} 译者注}
+	title={
+			{\nerd \char"F05A}
+			\hspace*{0.5mm}
+			{\bfseries 译者注}
+		}
 }
 
-\newcommand{\TranslatorNote}[1]{%
+\newcommand{\TranslatorNote}[1]{
 	\textcolor{sharpice_blue}{\textbf{译者注：#1}}
 }
