@@ -1,14 +1,19 @@
 \newtcolorbox[]{TranslatorNoteBox}
 {
 	enhanced,
-	frame hidden,
-	toptitle= 2mm,
-	boxrule = 0pt,
+	colframe=sharpice_blue,
+	colback=sharpice_blue,
+	boxrule=0.5pt,
+	arc=3mm,
 	after skip = 3ex,
 	before skip = 3ex,
-	colback = sharpice_blue,
-	colbacktitle = sharpice_blue,
+	colbacktitle=sharpice_blue,
+	coltitle=white,
+	fonttitle=\bfseries\sffamily,
+	toptitle= 2mm,
 	title={\faInfoCircle\hspace*{0.5mm} 译者注}
 }
 
-\newcommand{\TranslatorNote}[1]{\textcolor{sharpice_blue}{译者注：#1}}
+\newcommand{\TranslatorNote}[1]{%
+	\textcolor{sharpice_blue}{\textbf{译者注：#1}}
+}
