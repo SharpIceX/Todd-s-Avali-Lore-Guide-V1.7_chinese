@@ -35,10 +35,10 @@
 \usepackage[most]{tcolorbox}
 
 % 颜色定义
-\input{./scripts/colors.tex} % 颜色设置
-\input{./scripts/fonts.tex} % 字体设置
-\input{./scripts/headerfooter.tex} % 页眉页脚设置
-\input{./scripts/utils.tex} % 实用工具
+\input{scripts/colors.tex} % 颜色设置
+\input{scripts/fonts.tex} % 字体设置
+\input{scripts/headerfooter.tex} % 页眉页脚设置
+\input{scripts/utils.tex} % 实用工具
 
 % 章节标题颜色
 \titleformat{\section}
@@ -51,15 +51,15 @@
 \color{black}
 
 \pagenumbering{roman}
-\input{./pages/half-title/main.tex} % 半标题页
-\input{./pages/blank/main.tex} % 空白页
-\input{./pages/title.tex} % 正标题页
-\input{./pages/preface.tex} % 前言页
-\input{./pages/credits.tex} % 鸣谢页
-\input{./pages/revision_summary.tex} % 内容修订页
+\input{pages/half-title/main.tex} % 半标题页
+\input{pages/blank/main.tex} % 空白页
+\input{pages/title.tex} % 正标题页
+\input{pages/preface.tex} % 前言页
+\input{pages/credits.tex} % 鸣谢页
+\input{pages/revision_summary.tex} % 内容修订页
 % TODO：目录页，显示拉丁页码，上面的前言页开始为孤立目录块，下面的章节内容开始为正常目录块
 
 \pagenumbering{arabic}
-\input{./chapters/chapter1/main.tex} % 第一章内容
+\input{chapters/chapter1/main.tex} % 第一章内容
 
 \end{document}
