@@ -1,6 +1,10 @@
 % !TEX program = lualatex
 
-\documentclass{article}
+\documentclass[
+    openany,
+	twoside
+]{book}
+
 
 % 字体设置
 \usepackage{fontspec}
@@ -11,13 +15,14 @@
     paperwidth=210mm,
     paperheight=285mm,
     top=25mm,
-    bottom=20mm,
-    inner=23mm,
-    outer=18mm,
+    bottom=22mm,
+    left=22mm,
+    right=22mm,
     includeheadfoot,
     headheight=15pt,
-    headsep=5mm
+    headsep=5mm,
 ]{geometry}
+
 
 % 基础
 \usepackage{xcolor}
@@ -40,14 +45,23 @@
 \input{scripts/headerfooter.tex} % 页眉页脚设置
 \input{scripts/utils.tex} % 实用工具
 
-% 章节标题颜色
+% 章节标题颜色与样式
 \titleformat{\section}
-	{\color{darkbrown}\Large\bfseries}
-	{\thesection}{1em}{}
+	{\color{orangebold}\fontsize{18pt}{22pt}\bfseries}
+	{\thesection}
+	{0.8em}
+	{}
+
+% 子章节标题颜色与样式
+\titleformat{\subsection}
+	{\color{darkbrown}\fontsize{15pt}{18pt}\bfseries}
+	{\thesubsection}
+	{0.6em}
+	{}
 
 \begin{document}
 
-\pagecolor[HTML]{A9A9A9}
+\pagecolor[HTML]{C9C9C9}
 \color{black}
 
 \pagenumbering{roman}
