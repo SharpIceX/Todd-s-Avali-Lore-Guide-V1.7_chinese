@@ -10,7 +10,7 @@
 	"latex-workshop.latex.recipes": [
 		{
 			"name": "lualatex",
-			"tools": ["lualatex"]
+			"tools": ["lualatex", "lualatex"]
 		}
 	]
 }

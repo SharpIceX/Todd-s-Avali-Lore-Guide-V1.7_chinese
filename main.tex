@@ -29,6 +29,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{multicol}
+\usepackage{tikz}
 
 % 内容
 \usepackage{fancyhdr}
@@ -38,6 +39,7 @@
 \usepackage{indentfirst}
 \usepackage{ulem}
 \usepackage[most]{tcolorbox}
+\usepackage[colorlinks=true, linkcolor=black]{hyperref} % 目录超链接
 
 % 颜色定义
 \input{scripts/colors.tex} % 颜色设置
@@ -71,7 +73,8 @@
 \input{pages/preface.tex} % 前言页
 \input{pages/credits.tex} % 鸣谢页
 \input{pages/revision_summary.tex} % 内容修订页
-% TODO：目录页，显示拉丁页码，上面的前言页开始为孤立目录块，下面的章节内容开始为正常目录块
+
+\input{pages/toc.tex} % 目录页
 
 \pagenumbering{arabic}
 \input{chapters/chapter1/main.tex} % 第一章内容

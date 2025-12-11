@@ -1,14 +1,15 @@
 \thispagestyle{empty}
 
 \AddToShipoutPictureBG*{
-	\AtPageLowerLeft{
-		\includegraphics[width=\paperwidth,height=\paperheight]{pages/blank/logo.png}
-	}
+	\begin{tikzpicture}[remember picture,overlay]
+		\node[anchor=center] at (current page.center)
+		{\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{pages/blank/logo.png}};
+	\end{tikzpicture}
 }
 
-% ! 原本`Page intentionally left blank`左右两边是有中括号的，由于avali scratch字体问题导致高度不一致所以去除。
 \vspace*{\fill}
 \begin{center}
+	% ! 原本`Page intentionally left blank`左右两边是有中括号的，由于avali scratch字体问题导致高度不一致所以去除。
 	{\avaliscratch Page intentionally left blank}
 \end{center}
 \vspace*{\fill}
