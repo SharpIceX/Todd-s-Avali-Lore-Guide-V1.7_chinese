@@ -1,10 +1,17 @@
 {
 	"latex-workshop.latex.outDir": "./out",
+	"latex-workshop.latex.autoBuild.run": "onSave",
 	"latex-workshop.latex.tools": [
 		{
 			"name": "lualatex",
 			"command": "lualatex",
-			"args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-output-directory=./out", "%DOC%"]
+			"args": [
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-halt-on-error",
+				"-output-directory=./out",
+				"%DOC%"
+			]
 		}
 	],
 	"latex-workshop.latex.recipes": [
