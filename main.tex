@@ -37,6 +37,7 @@
 \usepackage{eso-pic}
 \usepackage{titlesec}
 \usepackage{setspace}
+\usepackage{changepage}
 \usepackage{indentfirst}
 \usepackage[most]{tcolorbox}
 \usepackage[font=small,skip=2pt]{caption}
@@ -67,9 +68,9 @@
 \color{black}
 
 \pagenumbering{roman}
-\input{pages/half-title/main.tex} % 半标题页
-\input{pages/blank/main.tex} % 空白页
-\input{pages/title.tex} % 正标题页
+\input{pages/cover/main.tex} % 封面页
+\input{pages/blank/main.tex} % 空白页——装饰页
+\input{pages/title.tex} % 标题页
 \input{pages/preface.tex} % 前言页
 \input{pages/credits.tex} % 鸣谢页
 \input{pages/revision_summary.tex} % 内容修订页
