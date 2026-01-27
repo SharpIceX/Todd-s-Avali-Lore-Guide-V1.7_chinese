@@ -1,31 +1,29 @@
 % !TEX program = lualatex
 
 \documentclass[
+    oneside,
     openany,
-	% ! 需要双面打印时才开启
-	% twoside
+    11pt,
+    a4paper
 ]{book}
 
 
 % 字体设置
-\usepackage{fontspec}
 \usepackage{unicode-math}
 \usepackage[fontset=none]{ctex}
 
 \usepackage[
-    paperwidth=210mm,
-    paperheight=285mm,
-    top=25mm,
-    bottom=22mm,
-    left=22mm,
-    right=22mm,
-    includeheadfoot,
-    headheight=15pt,
-    headsep=5mm,
+    a4paper,
+    top=22mm,
+    bottom=23mm,
+    left=20mm,
+    right=20mm,     
+    headheight=25pt,
+    headsep=7mm,
+    footskip=12mm,
 ]{geometry}
 \usepackage{enumitem}
-\usepackage[expansion=false, protrusion=false]{microtype}
-
+\usepackage[expansion=true, protrusion=true]{microtype}
 
 % 基础
 \usepackage{xcolor}
@@ -42,14 +40,24 @@
 \usepackage{changepage}
 \usepackage{indentfirst}
 \usepackage[most]{tcolorbox}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks, unicode=true]{hyperref}
 \usepackage{bookmark}
-\usepackage[font=small,skip=2pt]{caption}
-% 颜色定义
-\input{scripts/colors.tex} % 颜色设置
-\input{scripts/fonts.tex} % 字体设置
-\input{scripts/headerfooter.tex} % 页眉页脚设置
+\usepackage[font=small, labelfont=bf, labelsep=quad, skip=8pt]{caption}
+
+\input{scripts/metadata.tex} % PDF 元数据
+\input{scripts/colors.tex} % 颜色
+\input{scripts/fonts.tex} % 字体
+\input{scripts/headerfooter.tex} % 页眉页脚
 \input{scripts/utils.tex} % 实用工具
+
+% PDF 目录默认展开并显示章节编号
+\bookmarksetup{numbered, open}
+
+% 消除列表项之间过大的空隙
+\setlist{nosep}
+
+% 允许文本框跨页
+\tcbuselibrary{skins, breakable}
 
 % 章节标题颜色与样式
 \titleformat{\section}
@@ -72,8 +80,8 @@
 
 \pagenumbering{roman}
 \input{pages/cover/main.tex} % 封面页
-\input{pages/blank/main.tex} % 空白页——装饰页
-\input{pages/title.tex} % 标题页
+\input{pages/blank.tex} % 空白页——装饰页
+\input{pages/title.tex} % 内标题页
 \input{pages/preface.tex} % 前言页
 \input{pages/credits.tex} % 鸣谢页
 \input{pages/revision_summary.tex} % 内容修订页

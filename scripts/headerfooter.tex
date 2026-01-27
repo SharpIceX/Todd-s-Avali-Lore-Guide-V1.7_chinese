@@ -1,18 +1,21 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-\fancyhead[L]{\hspace*{-1cm}1.7 支持者版}
-\fancyhead[R]{\hspace*{2cm}20241221}
+% 页眉设置
+\fancyhead[L]{\hspace*{-8mm}\makebox[0pt][l]{1.7 支持者版}}
+\fancyhead[R]{\makebox[0pt][r]{20241221}\hspace*{-8mm}}
 
-% 页码
+% 页脚
 \fancyfoot[L]{
-	\vspace{-18pt}
-	\begin{flushleft}
-		\textcolor{orangebold}{\rule{1.3cm}{0.5mm}}\\[0.8mm]
-		\makebox[1.3cm][c]{\raisebox{-0.5mm}{\thepage}}\\[0.8mm]
-		\textcolor{orangebold}{\rule{1.3cm}{1mm}}
-	\end{flushleft}
+	\color{orangebold}
+	\vbox{
+		\hrule width 1.3cm height 0.5mm
+		\vskip 7pt
+		\hbox to 1.3cm{\hss \textcolor{black}{\small\thepage} \hss}
+		\vskip 7.5pt
+		\hrule width 1.3cm height 1mm
+	}
 }
 
-% 移除页眉的横线
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt} % 移除页眉线
+\renewcommand{\footrulewidth}{0pt} % 移除页脚线

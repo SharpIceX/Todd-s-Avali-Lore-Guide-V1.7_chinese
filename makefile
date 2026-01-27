@@ -1,5 +1,4 @@
 OUTDIR := ./out
-SRCS := $(wildcard *.tex)
 
 all:
 	mkdir -p $(OUTDIR)
@@ -8,3 +7,5 @@ all:
 
 clean:
 	rm -rf $(OUTDIR)
+
+.PHONY: all clean
