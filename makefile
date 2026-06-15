@@ -1,11 +1,15 @@
-OUTDIR := ./out
+OUTFILE := ./main.pdf
 
-all:
-	mkdir -p $(OUTDIR)
-	lualatex -synctex=1 -recorder -halt-on-error -file-line-error -output-directory=$(OUTDIR) ./main.tex
-	lualatex -synctex=1 -recorder -halt-on-error -file-line-error -output-directory=$(OUTDIR) ./main.tex
+GIT_HASH := $(shell git rev-parse --short HEAD 2>/dev/null || echo "未知git哈希")
+
+all: $(OUTFILE)
+
+$(OUTFILE): ./main.typ
+	typst compile ./main.typ $(OUTFILE) \
+		--font-path ./fonts \
+		--input git-hash=$(GIT_HASH)
 
 clean:
-	rm -rf $(OUTDIR)
+	rm -f $(OUTFILE)
 
 .PHONY: all clean

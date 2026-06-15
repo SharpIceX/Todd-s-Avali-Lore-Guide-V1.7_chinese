@@ -1,25 +1,16 @@
 {
-	"makefile.configureOnOpen": false,
-	"latex-workshop.latex.outDir": "./out",
-	"latex-workshop.latex.autoBuild.run": "onSave",
-	"latex-workshop.latex.tools": [
-		{
-			"name": "lualatex",
-			"command": "lualatex",
-			"args": [
-				"-synctex=1",
-				"-recorder",
-				"-file-line-error",
-				"-halt-on-error",
-				"-output-directory=./out",
-				"%DOC%"
-			]
-		}
-	],
-	"latex-workshop.latex.recipes": [
-		{
-			"name": "lualatex",
-			"tools": ["lualatex"]
-		}
-	]
+    "makefile.configureOnOpen": false,
+
+    "tinymist.formatterIndentSize": 4,
+    "tinymist.formatterProseWrap": true,
+    "tinymist.formatterPrintWidth": 120,
+    "tinymist.preview.refresh": "onSave",
+    "tinymist.formatterMode": "typstyle",
+    "tinymist.completion.symbol": "stepless",
+    "tinymist.fontPaths": ["./fonts"],
+    "tinymist.typstExtraArgs": ["--input", "git-hash=VSCode预览模式"],
+
+    "[typst]": {
+        "editor.defaultFormatter": "myriad-dreamin.tinymist"
+    }
 }
