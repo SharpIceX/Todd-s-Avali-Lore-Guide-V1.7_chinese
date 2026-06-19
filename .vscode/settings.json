@@ -2,7 +2,7 @@
     "makefile.configureOnOpen": false,
 
     "tinymist.formatterIndentSize": 4,
-    "tinymist.formatterProseWrap": true,
+    "tinymist.formatterProseWrap": false,
     "tinymist.formatterPrintWidth": 120,
     "tinymist.preview.refresh": "onSave",
     "tinymist.formatterMode": "typstyle",
