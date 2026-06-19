@@ -1,16 +1,15 @@
-#import "./color.typ": lightorange
+#import "./color.typ": lightorange, orangebold
 #import "./extra_fonts.typ": icon
 #import "@preview/showybox:2.0.4": showybox
 
 // 译者注，单行内容版本
 #let TranslatorNote(content) = {
-    text(fill: lightorange, weight: "bold")[（译者注：#content）]
+    text(fill: orangebold, weight: "bold")[（译者注：#content）]
 }
 
 // 译者注，多行内容版本
 #let TranslatorNoteBox(body) = {
     showybox(
-        body,
         inset: 3mm,
         sep: (thickness: 0pt),
         title: [
@@ -26,5 +25,9 @@
             border-color: lightorange,
             body-color: lightorange.lighten(90%),
         ),
+        {
+            set par(first-line-indent: 0pt)
+            body
+        },
     )
 }

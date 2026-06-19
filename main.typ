@@ -5,6 +5,7 @@
     lang: "zh",
     region: "cn",
     size: 10.5pt,
+    hyphenate: true,
     cjk-latin-spacing: auto,
     font: "Source Han Serif SC",
 )
@@ -68,7 +69,6 @@
 
 #show heading.where(level: 2): it => {
     pagebreak(weak: true)
-
     let has-line = not it.has("label") or it.label != <no-line>
 
     set block(
