@@ -4,8 +4,8 @@
     body
 }
 
-// Nerd Iocn 字体
+// Nerd Icon 字体
 #let icon(body) = {
     set text(font: "Symbols Nerd Font")
-    body
+    pdf.artifact(body)
 }
