@@ -59,7 +59,7 @@
     justify: true,
     leading: 0.8em,
     spacing: 1.2em,
-    first-line-indent: 2em,
+    first-line-indent: (amount: 2em, all: true),
 )
 
 #show heading.where(level: 1): it => {
